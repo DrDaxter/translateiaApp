@@ -5,5 +5,5 @@ export interface WordBook {
   word:             string;
   exist_definition: boolean;
   book_id:          number;
-  definition:       Definition;
+  //definition:       Definition;
 }

@@ -16,7 +16,6 @@ export const HomeScreen = () => {
 
   const getBooksCall = async () => {
     try {
-      console.log('START CALLING')
       const data = await getBooks()
       if (data) {
         setBooks(data)
@@ -36,9 +35,8 @@ export const HomeScreen = () => {
           <TouchableOpacity
             key={index}
             onPress={() =>
-              navigation.navigate('Book', {
-                ...item
-              })
+              navigation.navigate('Book', 
+                {title:item.book_name,bookId:item.book_id})
             }
           >
           <SimpleCardComponent title={item.book_name} />

@@ -4,10 +4,11 @@ import {HomeScreen} from '../screens/HomeScreen'
 import {BookWordScreen} from '../screens/BookWordScreen'
 import { Books } from '../interfaces/Books.interface'
 import { DrawerNavigator } from './DrawerNavigator'
+import { BookPageProps } from '../interfaces/WordPagePropsInterface'
 
 export type RootStackParams = {
   Drawer: undefined
-  Book: Books
+  Book: BookPageProps
 }
 const Stack = createStackNavigator<RootStackParams>()
 
@@ -17,10 +18,12 @@ export const StackNavigator = () => {
       id="mainNavigator"
       initialRouteName="Drawer"
       screenOptions={{
+        headerTintColor: "#2599fb",
+        headerTitleAlign: "center",
         headerStyle: {
           elevation: 0,
           shadowColor: 'transparent',
-          backgroundColor: '#ffffff'
+          backgroundColor: '#ffffff',
         }
       }}>
       <Stack.Screen
