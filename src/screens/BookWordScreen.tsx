@@ -36,8 +36,8 @@ export const BookWordScreen = () => {
     //navigation.navigate()
   }
 
-  const handleSheetClose = () => {
-    setOpenAction(false)
+  const handleFormSubmit = (word: string) => {
+    console.log(word)
   }
 
   return (
@@ -60,7 +60,9 @@ export const BookWordScreen = () => {
 
       <ActionSheetComponent 
         isOpen={openAction} 
-        handleClose={handleSheetClose} />
+        handleClose={() => setOpenAction(false)} 
+        handlerSubmit={(value) => handleFormSubmit(value)}  
+      />
     </View>
   )
 }
