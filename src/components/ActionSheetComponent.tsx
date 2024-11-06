@@ -16,7 +16,7 @@ import {
   Center
 } from '@gluestack-ui/themed';
 import { Formik } from 'formik';
-import schema from '../../shared/addWordSchema';
+import schema from '../shared/addWordSchema';
 
 interface Props{
   isOpen: boolean,

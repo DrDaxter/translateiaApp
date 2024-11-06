@@ -5,5 +5,6 @@ export interface WordBook {
   word:             string;
   exist_definition: boolean;
   book_id:          number;
-  //definition:       Definition;
 }
+
+export interface SaveNewWord extends Omit<WordBook, 'word_id'|'exist_definition'>{}
